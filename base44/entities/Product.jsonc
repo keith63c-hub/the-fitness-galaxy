@@ -1,0 +1,37 @@
+{
+  "name": "Product",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "image_url": {
+      "type": "string"
+    },
+    "amazon_url": {
+      "type": "string"
+    },
+    "rating": {
+      "type": "number"
+    },
+    "price_range": {
+      "type": "string"
+    },
+    "featured": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "name",
+    "category",
+    "description",
+    "amazon_url"
+  ]
+}

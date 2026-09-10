@@ -1,0 +1,45 @@
+{
+  "name": "BlogPost",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "excerpt": {
+      "type": "string"
+    },
+    "content": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    },
+    "image_url": {
+      "type": "string"
+    },
+    "author": {
+      "type": "string",
+      "default": "The Fitness Galaxy Team"
+    },
+    "read_time": {
+      "type": "string"
+    },
+    "meta_description": {
+      "type": "string"
+    },
+    "published": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "required": [
+    "title",
+    "slug",
+    "excerpt",
+    "content",
+    "category"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "name": "ForumTopic",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    },
+    "content": {
+      "type": "string"
+    },
+    "author_name": {
+      "type": "string"
+    },
+    "replies": {
+      "type": "number",
+      "default": 0
+    },
+    "views": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "required": [
+    "title",
+    "category",
+    "content",
+    "author_name"
+  ]
+}
