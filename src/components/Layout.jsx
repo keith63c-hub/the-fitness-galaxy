@@ -16,7 +16,7 @@ const socialLinks = [
   { label: "Instagram", icon: Instagram, url: "https://www.instagram.com/thefitnessgalaxy1/" },
   { label: "Facebook", icon: Facebook, url: "https://www.facebook.com/TheFitGal1/" },
   { label: "YouTube", icon: Youtube, url: "https://www.youtube.com/@TheFitnessGalaxy-z3q" },
-  { label: "Twitter", icon: Twitter, url: "https://twitter.com/thefitnessgalaxy" },
+  { label: "Twitter", icon: Twitter, url: "https://x.com/TheFitGalax" },
 ];
 
 export default function Layout() {
