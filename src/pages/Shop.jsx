@@ -136,15 +136,14 @@ export default function Shop() {
                       <span className="text-xs text-muted-foreground ml-1">{product.rating}</span>
                     </div>
                     <p className="mt-2 text-xs text-muted-foreground line-clamp-2 flex-1">{product.description}</p>
-                    <div className="mt-3 flex items-center justify-between gap-2">
-                      <span className="text-sm font-semibold">{product.price_range}</span>
+                    <div className="mt-3">
                       <a
                         href={product.amazon_url}
                         target="_blank"
                         rel="noopener noreferrer sponsored"
                         className="inline-flex items-center gap-1 rounded-lg bg-amber-500 px-3 py-1.5 text-xs font-semibold text-white hover:bg-amber-600 transition-colors"
                       >
-                        Buy on Amazon
+                        Check on Amazon
                       </a>
                     </div>
                   </div>
