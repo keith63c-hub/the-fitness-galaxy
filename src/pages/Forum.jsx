@@ -93,7 +93,7 @@ export default function Forum() {
               with #FitnessGalaxy.
             </p>
             <div className="mt-6 flex flex-wrap justify-center gap-3">
-              <a href="https://instagram.com/thefitnessgalaxy" target="_blank" rel="noopener noreferrer" className="rounded-lg bg-white px-5 py-2.5 text-sm font-semibold text-indigo-700 hover:bg-indigo-50 transition-colors">
+              <a href="https://www.instagram.com/thefitnessgalaxy1/" target="_blank" rel="noopener noreferrer" className="rounded-lg bg-white px-5 py-2.5 text-sm font-semibold text-indigo-700 hover:bg-indigo-50 transition-colors">
                 Follow on Instagram
               </a>
               <a href="https://youtube.com/@thefitnessgalaxy" target="_blank" rel="noopener noreferrer" className="rounded-lg border border-white/40 px-5 py-2.5 text-sm font-semibold text-white hover:bg-white/10 transition-colors">

@@ -3,7 +3,7 @@ import { Mail, MessageCircle, Instagram, Facebook, Youtube, Twitter, MapPin } fr
 import { useToast } from "@/components/ui/use-toast";
 
 const socials = [
-  { label: "Instagram", icon: Instagram, url: "https://instagram.com/thefitnessgalaxy", handle: "@thefitnessgalaxy" },
+  { label: "Instagram", icon: Instagram, url: "https://www.instagram.com/thefitnessgalaxy1/", handle: "@thefitnessgalaxy1" },
   { label: "Facebook", icon: Facebook, url: "https://facebook.com/thefitnessgalaxy", handle: "/thefitnessgalaxy" },
   { label: "YouTube", icon: Youtube, url: "https://youtube.com/@thefitnessgalaxy", handle: "@thefitnessgalaxy" },
   { label: "Twitter", icon: Twitter, url: "https://twitter.com/thefitnessgalaxy", handle: "@thefitnessgalaxy" },

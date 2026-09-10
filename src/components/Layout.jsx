@@ -13,7 +13,7 @@ const navLinks = [
 ];
 
 const socialLinks = [
-  { label: "Instagram", icon: Instagram, url: "https://instagram.com/thefitnessgalaxy" },
+  { label: "Instagram", icon: Instagram, url: "https://www.instagram.com/thefitnessgalaxy1/" },
   { label: "Facebook", icon: Facebook, url: "https://facebook.com/thefitnessgalaxy" },
   { label: "YouTube", icon: Youtube, url: "https://youtube.com/@thefitnessgalaxy" },
   { label: "Twitter", icon: Twitter, url: "https://twitter.com/thefitnessgalaxy" },
