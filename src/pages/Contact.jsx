@@ -5,7 +5,7 @@ import { useToast } from "@/components/ui/use-toast";
 const socials = [
   { label: "Instagram", icon: Instagram, url: "https://www.instagram.com/thefitnessgalaxy1/", handle: "@thefitnessgalaxy1" },
   { label: "Facebook", icon: Facebook, url: "https://facebook.com/thefitnessgalaxy", handle: "/thefitnessgalaxy" },
-  { label: "YouTube", icon: Youtube, url: "https://youtube.com/@thefitnessgalaxy", handle: "@thefitnessgalaxy" },
+  { label: "YouTube", icon: Youtube, url: "https://www.youtube.com/@TheFitnessGalaxy-z3q", handle: "@TheFitnessGalaxy-z3q" },
   { label: "Twitter", icon: Twitter, url: "https://twitter.com/thefitnessgalaxy", handle: "@thefitnessgalaxy" },
 ];
 
