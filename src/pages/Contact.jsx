@@ -118,7 +118,7 @@ export default function Contact() {
                   <Mail className="h-4 w-4 text-indigo-600" />
                   <h3 className="font-semibold text-sm">Email</h3>
                 </div>
-                <p className="text-sm text-muted-foreground">hello@thefitnessgalaxy.com</p>
+                <p className="text-sm text-muted-foreground">thefitnessgalaxy1@gmail.com</p>
               </div>
               <div className="rounded-xl bg-muted/50 border border-border p-5">
                 <div className="flex items-center gap-2 mb-2">
