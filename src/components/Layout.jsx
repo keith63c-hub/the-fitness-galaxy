@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, Outlet, useLocation } from "react-router-dom";
 import { Menu, X, Instagram, Facebook, Youtube, Twitter, Dumbbell } from "lucide-react";
+import PinterestIcon from "@/components/PinterestIcon";
 import { Button } from "@/components/ui/button";
 
 const navLinks = [
@@ -17,6 +18,7 @@ const socialLinks = [
   { label: "Facebook", icon: Facebook, url: "https://www.facebook.com/TheFitGal1/" },
   { label: "YouTube", icon: Youtube, url: "https://www.youtube.com/@TheFitnessGalaxy-z3q" },
   { label: "Twitter", icon: Twitter, url: "https://x.com/TheFitGalax" },
+  { label: "Pinterest", icon: PinterestIcon, url: "https://uk.pinterest.com/thefitnessgalaxy1/" },
 ];
 
 export default function Layout() {

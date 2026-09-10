@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Mail, MessageCircle, Instagram, Facebook, Youtube, Twitter, MapPin } from "lucide-react";
+import PinterestIcon from "@/components/PinterestIcon";
 import { useToast } from "@/components/ui/use-toast";
 
 const socials = [
@@ -7,6 +8,7 @@ const socials = [
   { label: "Facebook", icon: Facebook, url: "https://www.facebook.com/TheFitGal1/", handle: "/TheFitGal1" },
   { label: "YouTube", icon: Youtube, url: "https://www.youtube.com/@TheFitnessGalaxy-z3q", handle: "@TheFitnessGalaxy-z3q" },
   { label: "Twitter", icon: Twitter, url: "https://x.com/TheFitGalax", handle: "@TheFitGalax" },
+  { label: "Pinterest", icon: PinterestIcon, url: "https://uk.pinterest.com/thefitnessgalaxy1/", handle: "@thefitnessgalaxy1" },
 ];
 
 export default function Contact() {
