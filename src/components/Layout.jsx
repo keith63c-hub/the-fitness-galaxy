@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 const navLinks = [
   { label: "Home", path: "/" },
-  { label: "Reviews", path: "/reviews" },
+  { label: "Shop", path: "/shop" },
   { label: "Blog", path: "/blog" },
   { label: "Forum", path: "/forum" },
   { label: "About", path: "/about" },
@@ -152,9 +152,9 @@ export default function Layout() {
                   </Link>
                 </li>
                 <li>
-                  <a href="https://www.amazon.co.uk" target="_blank" rel="noopener noreferrer sponsored" className="text-muted-foreground hover:text-foreground transition-colors">
+                  <Link to="/shop" className="text-muted-foreground hover:text-foreground transition-colors">
                     Amazon Store
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>

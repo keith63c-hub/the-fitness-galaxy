@@ -13,7 +13,7 @@ import BlogPostPage from '@/pages/BlogPostPage';
 import Forum from '@/pages/Forum';
 import About from '@/pages/About';
 import Contact from '@/pages/Contact';
-import Reviews from '@/pages/Reviews';
+import Shop from '@/pages/Shop';
 import ProductPage from '@/pages/ProductPage';
 // Add page imports here
 
@@ -45,7 +45,7 @@ const AuthenticatedApp = () => {
     <Routes>
       <Route element={<Layout />}>
         <Route path="/" element={<Home />} />
-        <Route path="/reviews" element={<Reviews />} />
+        <Route path="/shop" element={<Shop />} />
         <Route path="/products/:id" element={<ProductPage />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:slug" element={<BlogPostPage />} />

@@ -77,7 +77,7 @@ export default function ProductPage() {
           <nav className="flex items-center gap-2 text-xs text-muted-foreground">
             <Link to="/" className="hover:text-foreground">Home</Link>
             <span>/</span>
-            <Link to="/reviews" className="hover:text-foreground">Reviews</Link>
+            <Link to="/shop" className="hover:text-foreground">Shop</Link>
             <span>/</span>
             <span className="text-foreground truncate">{product.name}</span>
           </nav>
@@ -87,8 +87,8 @@ export default function ProductPage() {
       {/* Product hero */}
       <section className="py-10 md:py-14">
         <div className="container mx-auto max-w-5xl px-4 sm:px-6">
-          <Link to="/reviews" className="inline-flex items-center gap-1 text-sm text-indigo-600 font-medium mb-6">
-            <ArrowLeft className="h-4 w-4" /> Back to all reviews
+          <Link to="/shop" className="inline-flex items-center gap-1 text-sm text-indigo-600 font-medium mb-6">
+            <ArrowLeft className="h-4 w-4" /> Back to shop
           </Link>
 
           <div className="grid gap-10 md:grid-cols-2">
