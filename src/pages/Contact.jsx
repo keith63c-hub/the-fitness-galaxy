@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Mail, MessageCircle, Instagram, Facebook, Youtube, Twitter, MapPin } from "lucide-react";
 import PinterestIcon from "@/components/PinterestIcon";
+import TikTokIcon from "@/components/TikTokIcon";
 import { useToast } from "@/components/ui/use-toast";
 
 const socials = [
@@ -9,6 +10,7 @@ const socials = [
   { label: "YouTube", icon: Youtube, url: "https://www.youtube.com/@TheFitnessGalaxy-z3q", handle: "@TheFitnessGalaxy-z3q" },
   { label: "Twitter", icon: Twitter, url: "https://x.com/TheFitGalax", handle: "@TheFitGalax" },
   { label: "Pinterest", icon: PinterestIcon, url: "https://uk.pinterest.com/thefitnessgalaxy1/", handle: "@thefitnessgalaxy1" },
+  { label: "TikTok", icon: TikTokIcon, url: "https://www.tiktok.com/@thefitgalax", handle: "@thefitgalax" },
 ];
 
 export default function Contact() {
