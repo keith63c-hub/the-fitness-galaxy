@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import { Link, Outlet, useLocation } from "react-router-dom";
-import { Menu, X, Instagram, Facebook, Youtube, Twitter, Dumbbell } from "lucide-react";
+import { Menu, X, Instagram, Facebook, Youtube, Twitter } from "lucide-react";
+import { Image } from "@/components/ui/image";
 import PinterestIcon from "@/components/PinterestIcon";
 import TikTokIcon from "@/components/TikTokIcon";
 import { Button } from "@/components/ui/button";
+
+const LOGO_URL = "https://media.base44.com/images/public/6aa282c8da7d58b1320c186e/fbb1b6e14_generated_image.png";
 
 const navLinks = [
   { label: "Home", path: "/" },
@@ -36,9 +39,7 @@ export default function Layout() {
         <div className="container mx-auto max-w-6xl px-4 sm:px-6">
           <div className="flex h-16 items-center justify-between">
             <Link to="/" className="flex items-center gap-2 font-heading font-bold text-lg tracking-tight">
-              <span className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-indigo-600 to-purple-600 text-white">
-                <Dumbbell className="h-5 w-5" />
-              </span>
+              <Image src={LOGO_URL} alt="The Fitness Galaxy logo" className="h-9 w-9 rounded-full" fittingType="fill" />
               <span>The Fitness Galaxy</span>
             </Link>
 
@@ -104,10 +105,8 @@ export default function Layout() {
           <div className="grid gap-8 md:grid-cols-4">
             <div className="md:col-span-2">
               <Link to="/" className="flex items-center gap-2 font-heading font-bold text-lg mb-3">
-                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-indigo-600 to-purple-600 text-white">
-                  <Dumbbell className="h-5 w-5" />
-                </span>
-                The Fitness Galaxy
+                <Image src={LOGO_URL} alt="The Fitness Galaxy logo" className="h-9 w-9 rounded-full" fittingType="fill" />
+                                The Fitness Galaxy
               </Link>
               <p className="text-sm text-muted-foreground max-w-md">
                 Your trusted guide to health, fitness, and wellness. We review the best Amazon products and share
