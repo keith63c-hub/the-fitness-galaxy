@@ -5,6 +5,7 @@ import { Image } from "@/components/ui/image";
 import PinterestIcon from "@/components/PinterestIcon";
 import TikTokIcon from "@/components/TikTokIcon";
 import { Button } from "@/components/ui/button";
+import NewsletterSignup from "@/components/NewsletterSignup";
 
 const LOGO_URL = "https://media.base44.com/images/public/6aa282c8da7d58b1320c186e/5312d0b6f_ChatGPTImageSep12202612_39_43AM.png";
 
@@ -161,6 +162,10 @@ export default function Layout() {
                 </li>
               </ul>
             </div>
+          </div>
+
+          <div className="mt-8 pt-6 border-t border-border">
+            <NewsletterSignup source="footer" variant="compact" />
           </div>
 
           <div className="mt-10 pt-6 border-t border-border">

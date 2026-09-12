@@ -1,0 +1,17 @@
+{
+  "name": "NewsletterSubscriber",
+  "type": "object",
+  "properties": {
+    "email": {
+      "type": "string",
+      "format": "email"
+    },
+    "source": {
+      "type": "string",
+      "default": "footer"
+    }
+  },
+  "required": [
+    "email"
+  ]
+}

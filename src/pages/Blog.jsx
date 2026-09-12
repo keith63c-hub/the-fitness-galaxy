@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { base44 } from "@/api/base44Client";
 import { Image } from "@/components/ui/image";
 import { Search, ArrowRight } from "lucide-react";
+import NewsletterSignup from "@/components/NewsletterSignup";
 
 export default function Blog() {
   const [posts, setPosts] = useState([]);
@@ -115,6 +116,13 @@ export default function Blog() {
               ))}
             </div>
           )}
+        </div>
+      </section>
+
+      {/* Newsletter signup */}
+      <section className="pb-16 md:pb-20">
+        <div className="container mx-auto max-w-4xl px-4 sm:px-6">
+          <NewsletterSignup source="blog" variant="card" />
         </div>
       </section>
     </div>
