@@ -2,13 +2,23 @@ import { createClientFromRequest } from 'npm:@base44/sdk@0.8.44';
 
 const BASE_URL = "https://thefitnessgalaxy.com";
 
+function escapeXml(value) {
+  if (value == null) return "";
+  return String(value)
+    .replace(/\x26/g, "\x26amp;")
+    .replace(/\x3c/g, "\x26lt;")
+    .replace(/\x3e/g, "\x26gt;")
+    .replace(/\x22/g, "\x26quot;")
+    .replace(/\x27/g, "\x26apos;");
+}
+
 function url(loc, lastmod, changefreq = "weekly", priority = "0.7") {
   return [
     "  <url>",
-    `    <loc>${loc}</loc>`,
-    lastmod ? `    <lastmod>${lastmod}</lastmod>` : "",
-    `    <changefreq>${changefreq}</changefreq>`,
-    `    <priority>${priority}</priority>`,
+    `    <loc>${escapeXml(loc)}</loc>`,
+    lastmod ? `    <lastmod>${escapeXml(lastmod)}</lastmod>` : "",
+    `    <changefreq>${escapeXml(changefreq)}</changefreq>`,
+    `    <priority>${escapeXml(priority)}</priority>`,
     "  </url>",
   ].filter(Boolean).join("\n");
 }
