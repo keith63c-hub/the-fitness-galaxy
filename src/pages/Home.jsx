@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { base44 } from "@/api/base44Client";
 import { Image } from "@/components/ui/image";
 import { ArrowRight, Star, TrendingUp, Users, BookOpen, MessageCircle, ShieldCheck } from "lucide-react";
+import FacebookShareButton from "@/components/FacebookShareButton";
 
 const heroImage = "https://media.base44.com/images/public/6aa282c8da7d58b1320c186e/6c3077789_generated_f87de50a.jpg";
 
@@ -61,6 +62,7 @@ export default function Home() {
                   Join the Forum
                 </span>
               </Link>
+              <FacebookShareButton label="Share on Facebook" className="bg-white/10 hover:bg-white/20 border border-white/30" />
             </div>
           </div>
         </div>
