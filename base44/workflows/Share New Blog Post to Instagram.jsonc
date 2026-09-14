@@ -1,0 +1,44 @@
+{
+  "name": "Share New Blog Post to Instagram",
+  "description": "Auto-publishes new published blog articles to The Fitness Galaxy Instagram Business account",
+  "trigger": {
+    "config": {
+      "trigger_type": "entity",
+      "entity_name": "BlogPost",
+      "events": [
+        "create"
+      ]
+    },
+    "condition": "${ .trigger.data.published != false and (.trigger.data.image_url // \"\") != \"\" }"
+  },
+  "definition": {
+    "document": {
+      "dsl": "1.0.0",
+      "name": "share_blog_to_instagram",
+      "version": "1.0",
+      "namespace": "base44"
+    },
+    "do": [
+      {
+        "post_to_instagram": {
+          "call": "invoke_backend_function",
+          "with": {
+            "function_name": "postToInstagram",
+            "args": {
+              "entity_type": "blog",
+              "title": "${ .trigger.data.title }",
+              "description": "${ .trigger.data.excerpt }",
+              "image_url": "${ .trigger.data.image_url }",
+              "slug": "${ .trigger.data.slug }"
+            }
+          },
+          "then": "end",
+          "x-base44": {
+            "title": "Post to Instagram",
+            "description": "Share the new blog article"
+          }
+        }
+      }
+    ]
+  }
+}
