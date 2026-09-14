@@ -121,11 +121,6 @@ export default function ProductPage() {
 
               <p className="mt-4 text-muted-foreground leading-relaxed">{product.description}</p>
 
-              <div className="mt-5 flex items-baseline gap-2">
-                <span className="text-2xl font-bold">{product.price_range}</span>
-                <span className="text-sm text-muted-foreground">on Amazon</span>
-              </div>
-
               {/* Amazon CTA */}
               <a
                 href={product.amazon_url}
@@ -133,11 +128,8 @@ export default function ProductPage() {
                 rel="noopener noreferrer sponsored"
                 className="mt-6 inline-flex items-center justify-center gap-2 rounded-lg bg-amber-500 px-6 py-3.5 text-sm font-bold text-white hover:bg-amber-600 transition-colors w-full sm:w-auto"
               >
-                <ShoppingBag className="h-4 w-4" /> Check Price on Amazon
+                <ShoppingBag className="h-4 w-4" /> Check on Amazon
               </a>
-              <p className="mt-2 text-xs text-muted-foreground">
-                Price and availability are accurate as of the date/time indicated and are subject to change.
-              </p>
 
               {/* Trust badges */}
               <div className="mt-8 grid grid-cols-3 gap-3">
