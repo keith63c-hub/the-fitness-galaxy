@@ -4,6 +4,7 @@ import { base44 } from "@/api/base44Client";
 import { Image } from "@/components/ui/image";
 import { Star, ArrowLeft, ShoppingBag, CheckCircle, ShieldCheck, Truck, Award } from "lucide-react";
 import PinterestSaveButton from "@/components/PinterestSaveButton";
+import FacebookShareButton from "@/components/FacebookShareButton";
 
 export default function ProductPage() {
   const { id } = useParams();
@@ -132,6 +133,10 @@ export default function ProductPage() {
               >
                 <ShoppingBag className="h-4 w-4" /> Check on Amazon
               </a>
+
+              <div className="mt-3">
+                <FacebookShareButton label="Share this product" />
+              </div>
 
               {/* Trust badges */}
               <div className="mt-8 grid grid-cols-3 gap-3">

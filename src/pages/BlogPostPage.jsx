@@ -5,6 +5,7 @@ import { Image } from "@/components/ui/image";
 import ReactMarkdown from "react-markdown";
 import { ArrowLeft, Clock, User, ArrowRight } from "lucide-react";
 import PinterestSaveButton from "@/components/PinterestSaveButton";
+import FacebookShareButton from "@/components/FacebookShareButton";
 
 export default function BlogPostPage() {
   const { slug } = useParams();
@@ -87,9 +88,12 @@ export default function BlogPostPage() {
       <article className="py-12 md:py-16">
         <div className="container mx-auto max-w-3xl px-4 sm:px-6">
           {/* Meta */}
-          <div className="flex items-center gap-4 text-sm text-muted-foreground mb-8 pb-8 border-b border-border">
-            <span className="flex items-center gap-1.5"><User className="h-4 w-4" /> {post.author}</span>
-            <span className="flex items-center gap-1.5"><Clock className="h-4 w-4" /> {post.read_time}</span>
+          <div className="flex flex-wrap items-center justify-between gap-4 text-sm text-muted-foreground mb-8 pb-8 border-b border-border">
+            <div className="flex items-center gap-4">
+              <span className="flex items-center gap-1.5"><User className="h-4 w-4" /> {post.author}</span>
+              <span className="flex items-center gap-1.5"><Clock className="h-4 w-4" /> {post.read_time}</span>
+            </div>
+            <FacebookShareButton label="Share" />
           </div>
 
           <div className="prose prose-slate max-w-none prose-headings:font-heading prose-headings:tracking-tight prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4 prose-p:leading-relaxed prose-li:my-1 prose-a:text-indigo-600">
