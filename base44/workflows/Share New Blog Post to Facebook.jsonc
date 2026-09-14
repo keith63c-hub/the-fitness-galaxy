@@ -1,0 +1,44 @@
+{
+  "name": "Share New Blog Post to Facebook",
+  "description": "Auto-posts new published blog articles to The Fitness Galaxy Facebook Page",
+  "trigger": {
+    "config": {
+      "trigger_type": "entity",
+      "entity_name": "BlogPost",
+      "events": [
+        "create"
+      ]
+    },
+    "condition": "${ .trigger.data.published != false }"
+  },
+  "definition": {
+    "document": {
+      "dsl": "1.0.0",
+      "name": "share_blog_to_facebook",
+      "version": "1.0",
+      "namespace": "base44"
+    },
+    "do": [
+      {
+        "post_to_facebook": {
+          "call": "invoke_backend_function",
+          "with": {
+            "function_name": "postToFacebook",
+            "args": {
+              "entity_type": "blog",
+              "title": "${ .trigger.data.title }",
+              "description": "${ .trigger.data.excerpt }",
+              "image_url": "${ .trigger.data.image_url }",
+              "slug": "${ .trigger.data.slug }"
+            }
+          },
+          "then": "end",
+          "x-base44": {
+            "title": "Post to Facebook",
+            "description": "Share the new blog article"
+          }
+        }
+      }
+    ]
+  }
+}

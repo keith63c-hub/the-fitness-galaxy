@@ -1,0 +1,44 @@
+{
+  "definition": {
+    "document": {
+      "dsl": "1.0.0",
+      "name": "share_product_to_facebook",
+      "version": "1.0",
+      "namespace": "base44"
+    },
+    "do": [
+      {
+        "post_to_facebook": {
+          "call": "invoke_backend_function",
+          "with": {
+            "function_name": "postToFacebook",
+            "args": {
+              "entity_type": "product",
+              "title": "${ .trigger.data.name }",
+              "description": "${ .trigger.data.description }",
+              "image_url": "${ .trigger.data.image_url }",
+              "product_id": "${ .trigger.entity_id }"
+            }
+          },
+          "then": "end",
+          "x-base44": {
+            "title": "Post to Facebook",
+            "description": "Share the new shop product"
+          }
+        }
+      }
+    ]
+  },
+  "description": "Auto-posts new shop products to The Fitness Galaxy Facebook Page",
+  "trigger": {
+    "condition": null,
+    "config": {
+      "trigger_type": "entity",
+      "events": [
+        "create"
+      ],
+      "entity_name": "Product"
+    }
+  },
+  "name": "Share New Product to Facebook"
+}
