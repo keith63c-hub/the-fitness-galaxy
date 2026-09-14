@@ -59,6 +59,20 @@ export default async function(req) {
     if (!createRes.ok) throw new Error(created.error?.message || "Instagram media creation failed");
     const creationId = created.id;
 
+    // Wait for Instagram to finish processing the container before publishing.
+    // The container is not publishable the instant it is created; publishing too
+    // early returns "Media ID is not available". Poll status_code until FINISHED.
+    let status = "IN_PROGRESS";
+    const deadline = Date.now() + 30000;
+    while (status === "IN_PROGRESS" && Date.now() < deadline) {
+      await new Promise((r) => setTimeout(r, 3000));
+      const stRes = await fetch(`${IG_API}/${creationId}?fields=status_code&access_token=${encodeURIComponent(accessToken)}`);
+      const st = await stRes.json();
+      status = st.status_code || "IN_PROGRESS";
+    }
+    if (status === "ERROR") throw new Error("Instagram image processing failed (check aspect ratio 4:5–1.91:1 and that the image URL is public)");
+    if (status !== "FINISHED") throw new Error("Instagram media processing timed out before ready");
+
     // Step 2: publish the container
     const publishParams = new URLSearchParams();
     publishParams.set("creation_id", creationId);
