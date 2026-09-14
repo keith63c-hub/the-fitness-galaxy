@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import { base44 } from "@/api/base44Client";
 import { Image } from "@/components/ui/image";
 import { Star, ArrowLeft, ShoppingBag, CheckCircle, ShieldCheck, Truck, Award } from "lucide-react";
+import PinterestSaveButton from "@/components/PinterestSaveButton";
 
 export default function ProductPage() {
   const { id } = useParams();
@@ -93,10 +94,11 @@ export default function ProductPage() {
 
           <div className="grid gap-10 md:grid-cols-2">
             {/* Image */}
-            <div className="rounded-2xl border border-border bg-card overflow-hidden">
+            <div className="group relative rounded-2xl border border-border bg-card overflow-hidden">
               <div className="aspect-square">
                 <Image src={product.image_url} alt={product.name} className="h-full w-full object-cover" fittingType="fill" />
               </div>
+              <PinterestSaveButton imageUrl={product.image_url} title={product.name} description={product.description} />
             </div>
 
             {/* Details */}

@@ -4,6 +4,7 @@ import { base44 } from "@/api/base44Client";
 import { Image } from "@/components/ui/image";
 import ReactMarkdown from "react-markdown";
 import { ArrowLeft, Clock, User, ArrowRight } from "lucide-react";
+import PinterestSaveButton from "@/components/PinterestSaveButton";
 
 export default function BlogPostPage() {
   const { slug } = useParams();
@@ -67,8 +68,9 @@ export default function BlogPostPage() {
   return (
     <div>
       {/* Hero image */}
-      <div className="relative h-[40vh] min-h-[280px] overflow-hidden">
+      <div className="group relative h-[40vh] min-h-[280px] overflow-hidden">
         <Image src={post.image_url} alt={post.title} className="h-full w-full object-cover" fittingType="fill" />
+        <PinterestSaveButton imageUrl={post.image_url} title={post.title} description={post.excerpt || post.meta_description} />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-slate-950/20" />
         <div className="absolute bottom-0 left-0 right-0">
           <div className="container mx-auto max-w-3xl px-4 sm:px-6 pb-8">
