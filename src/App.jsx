@@ -15,6 +15,7 @@ import About from '@/pages/About';
 import Contact from '@/pages/Contact';
 import Shop from '@/pages/Shop';
 import ProductPage from '@/pages/ProductPage';
+import BannerResizer from '@/pages/BannerResizer';
 // Add page imports here
 
 const AuthenticatedApp = () => {
@@ -52,6 +53,7 @@ const AuthenticatedApp = () => {
         <Route path="/forum" element={<Forum />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/banner-resizer" element={<BannerResizer />} />
       </Route>
       <Route path="*" element={<PageNotFound />} />
     </Routes>
